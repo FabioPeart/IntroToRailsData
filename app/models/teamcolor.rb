@@ -1,0 +1,2 @@
+class Teamcolor < ApplicationRecord
+end
