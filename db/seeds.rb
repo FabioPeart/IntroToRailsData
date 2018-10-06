@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+Teamcolor.destroy_all
+
+10.times do
+    teamcolor = Teamcolor.create(color: Fake::Color.unique.name)
+
+    users_per_teamcolor = Faker::Number.number(2).to_i
+
+    users_per_teamcolor.times do
+        teamcolor.user.create(name: Faker::Name.name,
+                              username: Faker::Funny_name.unique.name ,
+                              age: Faker::Number.number(2).to_i,
+                              user_level: Faker::Number.number(2).to_i)
+      end
+
+
+
+end

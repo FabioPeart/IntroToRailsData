@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_06_031910) do
+ActiveRecord::Schema.define(version: 2018_10_06_041731) do
+
+  create_table "cards", force: :cascade do |t|
+    t.string "layout"
+    t.string "name"
+    t.integer "power"
+    t.integer "toughness"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "teamcolors", force: :cascade do |t|
     t.string "color"
@@ -23,8 +32,10 @@ ActiveRecord::Schema.define(version: 2018_10_06_031910) do
     t.string "username"
     t.integer "age"
     t.integer "user_level"
+    t.integer "teamcolor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["teamcolor_id"], name: "index_users_on_teamcolor_id"
   end
 
 end

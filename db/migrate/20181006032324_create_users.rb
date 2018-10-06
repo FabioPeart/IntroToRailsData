@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :username
       t.integer :age
       t.integer :user_level
+      t.references :teamcolor, foreign_key: true
 
       t.timestamps
     end

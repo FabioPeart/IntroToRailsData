@@ -1,15 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  layout: MyString
   name: MyString
-  username: MyString
-  age: 1
-  user_level: 1
-  teamcolor: one
+  power: 1
+  toughness: 1
 
 two:
+  layout: MyString
   name: MyString
-  username: MyString
-  age: 1
-  user_level: 1
-  teamcolor: two
+  power: 1
+  toughness: 1
