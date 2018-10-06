@@ -2,5 +2,5 @@ class Teamcolor < ApplicationRecord
     has_many :users, dependent: :destroy
 
 
-    validates :color, precence: true, uniqueness: true
+    validates :color, presence: true, uniqueness: true
 end

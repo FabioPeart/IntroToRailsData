@@ -1,9 +1,10 @@
 class User < ApplicationRecord
   belongs_to :teamcolor
-  has_many :card, through: user_card
+  has_many :user_cards
+  has_many :cards, through: :user_cards
 
-  validates :name, precence: true
-  validates :username, precence: true
-  validates :age, 
+  validates :name, presence: true
+  validates :username, presence: true
+  validates :age, numericality: { only_integer: true }
   validates :user_level, numericality: { only_integer: true }
 end

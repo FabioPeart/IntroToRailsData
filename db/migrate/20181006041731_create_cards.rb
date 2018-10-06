@@ -3,8 +3,8 @@ class CreateCards < ActiveRecord::Migration[5.2]
     create_table :cards do |t|
       t.string :layout
       t.string :name
-      t.integer :power
-      t.integer :toughness
+      t.string :power
+      t.string :toughness
 
       t.timestamps
     end

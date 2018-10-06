@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 2018_10_06_042327) do
   create_table "cards", force: :cascade do |t|
     t.string "layout"
     t.string "name"
-    t.integer "power"
-    t.integer "toughness"
+    t.string "power"
+    t.string "toughness"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
