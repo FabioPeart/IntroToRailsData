@@ -9,7 +9,7 @@ require 'net/http'
 require 'json'
 require 'pp'
 
-#User_card.destroy_all
+UserCard.destroy_all
 User.destroy_all
 Card.destroy_all
 Teamcolor.destroy_all
@@ -17,32 +17,37 @@ Teamcolor.destroy_all
 file = File.read "app/assets/json/allcards.json"
 jsonData = JSON.parse(file)
 
-jsonData.each do |data|
-    card = Card.create(layout: data["layout"],
-                       name: data["name"],
-                       power: data["power"],
-                       toughness:data["toughness"]  )    
+jsonData.each do |card_data|
+    card_data.each do |data|
+        card = Card.create(layout: data['layout'],
+                               name: data['name'],
+                               power: data['power'],
+                               toughness:data['toughness'])  
+            
+    end  
 end
 
 10.times do
-    teamcolor = Teamcolor.create(color: Fake::Color.unique.name)
+    teamcolor = Teamcolor.create(color: Faker::Color.unique.color_name)
 
     users_per_teamcolor = Faker::Number.number(2).to_i
 
-    users_per_teamcolor.times do
-        teamcolor.user.create(name: Faker::Name.name,
-                              username: Faker::Funny_name.unique.name ,
+    10.times do
+        teamcolor.users.create(name: Faker::Name.name,
+                              username: Faker::Internet.email,
                               age: Faker::Number.number(2).to_i,
                               user_level: Faker::Number.number(2).to_i)
       end
 end
 
-puts "Total of Ash trees: #{User.count}"
+puts "Total of Teamcolor: #{Teamcolor.count}"
+puts "Total of Users: #{User.count}"
+puts "Total of Card: #{Card.count}"
 
-20.times do
+10.times do
     user = User.all.sample
-    card = Card.all.sammple
-    user_card = User_card.create(user: user, card: card)
+    card = Card.all.sample
+    UserCard.create(user: user, card: card)
 end
 
 

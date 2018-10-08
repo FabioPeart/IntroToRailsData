@@ -6,5 +6,5 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :username, presence: true
   validates :age, numericality: { only_integer: true }
-  validates :user_level, numericality: { only_integer: true }
+  validates :user_level, presence: true, numericality: { only_integer: true }
 end

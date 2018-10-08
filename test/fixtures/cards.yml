@@ -3,11 +3,11 @@
 one:
   layout: MyString
   name: MyString
-  power: 1
-  toughness: 1
+  power: MyString
+  toughness: MyString
 
 two:
   layout: MyString
   name: MyString
-  power: 1
-  toughness: 1
+  power: MyString
+  toughness: MyString

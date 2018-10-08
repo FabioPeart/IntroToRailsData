@@ -3,4 +3,5 @@ class Teamcolor < ApplicationRecord
 
 
     validates :color, presence: true, uniqueness: true
+    
 end
