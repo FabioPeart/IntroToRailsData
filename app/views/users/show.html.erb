@@ -1,5 +1,15 @@
 <h2> <%= @user.name %> </h2>
 
-<p>
-<b>Team Color:</b> <%= @user.teamcolor.color %>
-</p>
+<p><b>Username: </b><%= @user.name %></p>
+<p><b>Age: </b><%= @user.age %></p>
+<p><b>User_level: </b><%= @user.user_level %></p>
+<p><b>Team Color:</b> <%= link_to @user.teamcolor.color, teamcolor_path(@user.teamcolor.id) %></p>
+
+<p>List of the cards owned by the user:</p>
+<ul>
+    <% @user.cards.each do |card| %>
+    <li><%= link_to card.name, card %></li>
+    <% end %>
+</ul>
+
+<%# controller: 'teamcolors', action: 'show' %>
