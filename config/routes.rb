@@ -14,18 +14,14 @@ Rails.application.routes.draw do
 
   #get 'pages/about', to: 'pages#about'
   get 'about', to: 'pages#about', as: 'about'
+
+
   # get 'teamcolor', to: 'teamcolors#index', as: 'teamcolor'
   # get 'card', to: 'cards#index', as: 'card'
-
-
   # get 'users/index'
   # get 'users' => 'users#index'
- 
-
   # get 'users/show'
   # get 'users/:id', to: 'users#show', id: /\d+/
-
-
   # get 'teamcolors/index'
   # get 'teamcolors/show'
   # get 'cards/index'
