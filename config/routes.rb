@@ -6,6 +6,12 @@ Rails.application.routes.draw do
   resources :teamcolors, only: [:index, :show]
   resources :cards, only: [:index, :show]
 
+  resources :search, only: [:index] do
+    collection do
+      get 'results'
+    end
+  end
+
   #get 'pages/about', to: 'pages#about'
   get 'about', to: 'pages#about', as: 'about'
   # get 'teamcolor', to: 'teamcolors#index', as: 'teamcolor'
