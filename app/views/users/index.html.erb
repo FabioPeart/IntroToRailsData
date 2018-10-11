@@ -2,12 +2,12 @@
 
 <%= form_tag(results_search_index_path, method: "get") do %>
   <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
+  <%= text_field_tag(:q, nil, {:onkeyup => 'quickSearch()'}) %>
   <%= submit_tag("Search") %>
 <% end %>
 
-<ul>
+<ul id="ul_search">
     <% @users.each do |user| %>
-    <li><%= link_to user.name, user %></li>
+    <li><%= link_to user.name, user %>    (cards: <%= user.cards.count %>)</li>
     <% end %>
 </ul>

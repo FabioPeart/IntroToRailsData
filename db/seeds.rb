@@ -32,7 +32,7 @@ end
 
     users_per_teamcolor = Faker::Number.number(2).to_i
 
-    10.times do
+    users_per_teamcolor.times do #use 20 for testing
         teamcolor.users.create(name: Faker::Name.name,
                               username: Faker::Internet.email,
                               age: Faker::Number.number(2).to_i,
@@ -44,7 +44,7 @@ puts "Total of Teamcolor: #{Teamcolor.count}"
 puts "Total of Users: #{User.count}"
 puts "Total of Card: #{Card.count}"
 
-10.times do
+90.times do
     user = User.all.sample
     card = Card.all.sample
     UserCard.create(user: user, card: card)

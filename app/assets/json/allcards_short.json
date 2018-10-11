@@ -1,0 +1,117 @@
+{
+  "Adorable Kitten": {
+    "layout"  : "normal",
+    "name"    : "Adorable Kitten",
+    "manaCost": "{W}",
+    "cmc"     : 1,
+    "colors"  : [
+      "White"
+    ],
+    "type" : "Host Creature — Cat",
+    "types": [
+      "Host",
+      "Creature"
+    ],
+    "subtypes": [
+      "Cat"
+    ],
+    "text"         : "When this creature enters the battlefield, roll a six-sided die. You gain life equal to the result.",
+    "power"        : "1",
+    "toughness"    : "1",
+    "imageName"    : "adorable kitten",
+    "colorIdentity": [
+      "W"
+    ]
+  },
+  "Aerial Toastmaster": {
+    "layout"  : "normal",
+    "name"    : "Aerial Toastmaster",
+    "manaCost": "{3}{W}",
+    "cmc"     : 4,
+    "colors"  : [
+      "White"
+    ],
+    "type" : "Artifact Creature — Cyborg Rigger",
+    "types": [
+      "Artifact",
+      "Creature"
+    ],
+    "subtypes": [
+      "Cyborg",
+      "Rigger"
+    ],
+    "text"         : "Flying\n{3}{W}, Sacrifice another artifact: Aerial Toastmaster assembles a Contraption. (Put the top card of your Contraption deck face up onto one of your sprockets.)",
+    "power"        : "3",
+    "toughness"    : "2",
+    "imageName"    : "aerial toastmaster",
+    "colorIdentity": [
+      "W"
+    ]
+  },
+  "Amateur Auteur": {
+    "layout"  : "normal",
+    "name"    : "Amateur Auteur",
+    "manaCost": "{1}{W}",
+    "cmc"     : 2,
+    "colors"  : [
+      "White"
+    ],
+    "type" : "Creature — Human",
+    "types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Human"
+    ],
+    "text"         : "Sacrifice Amateur Auteur: Destroy target enchantment.",
+    "power"        : "2",
+    "toughness"    : "2",
+    "imageName"    : "amateur auteur",
+    "colorIdentity": [
+      "W"
+    ]
+  },
+  "By Gnome Means": {
+    "layout"  : "normal",
+    "name"    : "By Gnome Means",
+    "manaCost": "{2}{W}",
+    "cmc"     : 3,
+    "colors"  : [
+      "White"
+    ],
+    "type" : "Enchantment",
+    "types": [
+      "Enchantment"
+    ],
+    "text"         : "{1}{W}, Remove a counter from a permanent you control: Create a 1/1 colorless Gnome artifact creature token.\n{1}{W}, Sacrifice an artifact: Choose any kind of counter a printed card refers to, then put one of that counter on target permanent.",
+    "imageName"    : "by gnome means",
+    "colorIdentity": [
+      "W"
+    ]
+  },
+  "Chivalrous Chevalier": {
+    "layout"  : "normal",
+    "name"    : "Chivalrous Chevalier",
+    "manaCost": "{4}{W}",
+    "cmc"     : 5,
+    "colors"  : [
+      "White"
+    ],
+    "type" : "Artifact Creature — Cyborg Knight",
+    "types": [
+      "Artifact",
+      "Creature"
+    ],
+    "subtypes": [
+      "Cyborg",
+      "Knight"
+    ],
+    "text"         : "Flying\nWhen Chivalrous Chevalier enters the battlefield, return a creature you control to its owner's hand unless you compliment an opponent.",
+    "power"        : "3",
+    "toughness"    : "3",
+    "imageName"    : "chivalrous chevalier",
+    "colorIdentity": [
+      "W"
+    ]
+  }
+}
